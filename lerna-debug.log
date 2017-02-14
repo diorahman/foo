@@ -1,0 +1,36 @@
+lerna(verbose) GitUtilities.isInitialized    ()
+lerna(verbose) GitUtilities.isInitialized    () => true
+lerna(verbose) GitUtilities.getTopLevelDirectory()
+lerna(verbose) GitUtilities.getTopLevelDirectory() => "."
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./lerna.json") => "{\n  \"lerna\": \"2.0.0-beta.35\",\n  \"packages\": [\n    \"packages/*\"\n  ],\n  \"version\": \"0.0.0\"\n}"
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json")
+lerna(verbose) FileSystemUtilities.readFileSync("./package.json") => "{\n  \"name\": \"bar\",\n  \"version\": \"0.0.8\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"keywords\": [],\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"devDependencies\": {\n    \"lerna\": \"2.0.0-beta.35\"\n  }\n}"
+lerna(info)    Lerna v2.0.0-beta.35
+lerna(verbose) FileSystemUtilities.existsSync("./package.json")
+lerna(verbose) FileSystemUtilities.existsSync("./package.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json")
+lerna(verbose) FileSystemUtilities.existsSync("./lerna.json") => true
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION")
+lerna(verbose) FileSystemUtilities.existsSync("./VERSION") => false
+lerna(verbose) Attempting running PublishCommand.initialize
+lerna(info)    Current version: 0.0.0
+lerna(info)    Checking for updated packages...
+lerna(verbose) GitUtilities.hasTags          ()
+lerna(verbose) GitUtilities.hasTags          () => false
+lerna(error)   Errored while running PublishCommand.initialize
+    Error: No updated packages to publish.
+        at PublishCommand.initialize (/home/dio/Experiments/misc/lerna/lib/commands/PublishCommand.js:98:18)
+        at PublishCommand._attempt (/home/dio/Experiments/misc/lerna/lib/Command.js:196:21)
+        at PublishCommand.runCommand (/home/dio/Experiments/misc/lerna/lib/Command.js:180:12)
+        at PublishCommand.run (/home/dio/Experiments/misc/lerna/lib/Command.js:98:12)
+        at Object.<anonymous> (/home/dio/Experiments/misc/lerna/bin/lerna.js:71:11)
+        at Module._compile (module.js:570:32)
+        at Object.Module._extensions..js (module.js:579:10)
+        at Module.load (module.js:487:32)
+        at tryModuleLoad (module.js:446:12)
+        at Function.Module._load (module.js:438:3)
